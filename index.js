@@ -3,7 +3,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const app = express();
-const port = 3000;
 
 const url = 'https://jkt48.com/member/list?lang=id';
 const baseUrl = 'https://jkt48.com';
@@ -52,7 +51,5 @@ function searchMemberByName(query) {
   );
 }
 
-// Jalankan server
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+// Jalankan server (tanpa menentukan port)
+module.exports = app;
